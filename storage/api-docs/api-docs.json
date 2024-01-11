@@ -1,0 +1,31 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "APIs for Demo App",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/users": {
+            "get": {
+                "summary": "Get example data",
+                "operationId": "ccf4de46931338f0a533c3710b21d59c",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "name": "bearerAuth",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    }
+}
