@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +21,7 @@ Route::get('/', function () {
 
 Route::get('/users',[UserController::class,'getUsers']);
 
+Route::post('/createStudent', [StudentController::class, 'create']);
+Route::get('/getAllStudents', [StudentController::class, 'getAllStudents']);
+Route::put('/updateStudent/{id}', [StudentController::class, 'updateStudent']);
+Route::delete('/deleteStudent/{id}', [StudentController::class, 'deleteStudent']);
